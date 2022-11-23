@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lista_tarefas_alura/components/task.dart';
+import 'package:lista_tarefas_alura/data/task_inherited.dart';
+import 'package:lista_tarefas_alura/screens/form_screen.dart';
 
 class InitialScreen extends StatefulWidget {
   const InitialScreen({Key? key}) : super(key: key);
@@ -9,7 +10,6 @@ class InitialScreen extends StatefulWidget {
 }
 
 class _InitialScreenState extends State<InitialScreen> {
-  bool taskOpacity = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,90 +17,22 @@ class _InitialScreenState extends State<InitialScreen> {
         // leading: Container(),
         title: const Text("Tarefas"),
       ),
-      body: AnimatedOpacity(
-        opacity: taskOpacity ? 1 : 0,
-        duration: const Duration(milliseconds: 500),
-        child: ListView(
-          children: const [
-            Task(
-                taskName: "Aprender Flutter",
-                taskPhoto: "assets/images/flutter.jpg",
-                taskDifficulty: 3),
-            Task(
-              taskName: "Aprender Arquitetura",
-              taskPhoto:
-              "assets/images/architecture.jpg",
-              taskDifficulty: 2,
-            ),
-            Task(
-              taskName: "Aprender Android",
-              taskPhoto:
-              "assets/images/android.jpg",
-              taskDifficulty: 4,
-            ),
-            Task(
-              taskName: "Aprender iOS",
-              taskPhoto:
-              "assets/images/ios.jpg",
-              taskDifficulty: 4,
-            ),
-            Task(
-                taskName: "Aprender Flutter",
-                taskPhoto: "assets/images/flutter.jpg",
-                taskDifficulty: 3),
-            Task(
-              taskName: "Aprender Arquitetura",
-              taskPhoto:
-              "assets/images/architecture.jpg",
-              taskDifficulty: 2,
-            ),
-            Task(
-              taskName: "Aprender Android",
-              taskPhoto:
-              "assets/images/android.jpg",
-              taskDifficulty: 4,
-            ),
-            Task(
-              taskName: "Aprender iOS",
-              taskPhoto:
-              "assets/images/ios.jpg",
-              taskDifficulty: 4,
-            ),
-            Task(
-                taskName: "Aprender Flutter",
-                taskPhoto: "assets/images/flutter.jpg",
-                taskDifficulty: 3),
-            Task(
-              taskName: "Aprender Arquitetura",
-              taskPhoto:
-              "assets/images/architecture.jpg",
-              taskDifficulty: 2,
-            ),
-            Task(
-              taskName: "Aprender Android",
-              taskPhoto:
-              "assets/images/android.jpg",
-              taskDifficulty: 4,
-            ),
-            Task(
-              taskName: "Aprender iOS",
-              taskPhoto:
-              "assets/images/ios.jpg",
-              taskDifficulty: 4,
-            ),
-            SizedBox(
-              height: 80,
-            )
-          ],
-        ),
+      body: ListView(
+        padding: const EdgeInsets.only(top: 8, bottom: 70),
+        children: TaskInherited.of(context).taskList,
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){
+        onPressed: () {
           setState(() {
-            taskOpacity = !taskOpacity;
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (contextNew) => FormScreen(taskContext: context),
+              ),
+            );
           });
         },
-        child: const Icon(Icons.remove_red_eye),
+        child: const Icon(Icons.add),
       ),
     );
   }
