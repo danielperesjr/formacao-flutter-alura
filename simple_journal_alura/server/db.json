@@ -1,0 +1,37 @@
+{
+  "learnhttp": {
+    "content": "Olá mundo!"
+  },
+  "journals": [
+    {
+      "id": "425f9ab0-6c62-11ed-ba80-7de5a5dbcf04",
+      "content": "Hoje foi uma boa segunda!",
+      "created_at": "2022-11-14 22:31:59.884148",
+      "updated_at": "2022-11-14 22:31:59.884148"
+    },
+    {
+      "id": "ac300130-6c64-11ed-9aaf-51460d88be1f",
+      "content": "Hoje foi quinta-feira!",
+      "created_at": "2022-11-24 22:58:10.698952",
+      "updated_at": "2022-11-24 22:58:10.698952"
+    },
+    {
+      "id": "119a1570-6c69-11ed-85f5-995915fcc0b5",
+      "content": "Foi um belo Domingo de sol!",
+      "created_at": "2022-11-20 23:29:44.363898",
+      "updated_at": "2022-11-20 23:29:44.363898"
+    },
+    {
+      "id": "2c52f200-6c6a-11ed-8eb5-b13d2d06f1dd",
+      "content": "Ainda bem que é sexta-feira!",
+      "created_at": "2022-11-18 23:37:34.661895",
+      "updated_at": "2022-11-18 23:37:34.661895"
+    },
+    {
+      "id": "a7129a50-6c6e-11ed-8182-5f613dee7e05",
+      "content": "Hoje é quarta-feira!",
+      "created_at": "2022-11-16 00:09:58.031583",
+      "updated_at": "2022-11-16 00:09:58.031583"
+    }
+  ]
+}
