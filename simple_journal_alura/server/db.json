@@ -1,19 +1,67 @@
 {
+  "users": [
+    {
+      "email": "danielperes.junior@gmail.com",
+      "password": "$2a$10$mnrak8bW8olteNFFAqYOieNoIMbOlMGKnLR90Y8rjB402yeg.ocv2",
+      "id": 1
+    },
+    {
+      "email": "danielperes@gmail.com",
+      "password": "$2a$10$PJY2hVhX0BJGqNhZlXMI..hTuKzY24tMRnZO7SSW50WmEiRzVufTy",
+      "id": 2
+    },
+    {
+      "email": "danielperes.junior@outlook.com",
+      "password": "$2a$10$qdFTXpr4usyOoAfLDNNIXO1MPuCmYhuWBcGl6FZ2q6Kf4la.pHt8C",
+      "id": 3
+    },
+    {
+      "email": "daniel@outlook.com",
+      "password": "$2a$10$qrhYv13sLMhSe96raC.ZZOY2hCYCGXbY9Yh3ixdQeazYUhupeqNva",
+      "id": 4
+    },
+    {
+      "email": "daniel@yahoo.com",
+      "password": "$2a$10$k.KUR7v6FX6YIb25G35Lhux.44.3pvesZBQ5DJ3k.1xJUCSI4y96C",
+      "id": 5
+    },
+    {
+      "email": "daniel2@gmail.com",
+      "password": "$2a$10$yH6PXguSYovbuxmebeDYqO4ePrIiMs7kEuMJsA1h1TZcfXDDTdtq2",
+      "id": 6
+    }
+  ],
   "learnhttp": {
     "content": "Olá mundo!"
   },
   "journals": [
     {
       "id": "425f9ab0-6c62-11ed-ba80-7de5a5dbcf04",
-      "content": "Hoje foi uma boa segunda!",
-      "created_at": "2022-11-14 22:31:59.884148",
-      "updated_at": "2022-11-14 22:31:59.884148"
+      "content": "Hoje foi segunda!",
+      "created_at": "2022-11-15 22:31:59.884148",
+      "updated_at": "2022-11-15 22:31:59.884148",
+      "userId": 1
     },
     {
-      "id": "119a1570-6c69-11ed-85f5-995915fcc0b5",
-      "content": "Foi um belo Domingo de sol! Que beleza! SHOW!",
-      "created_at": "2022-11-20 23:29:44.363898",
-      "updated_at": "2022-11-20 23:29:44.363898"
+      "id": "ab65dba0-6dde-11ed-b5b5-19ab06e25a9b",
+      "content": "Teste 1",
+      "created_at": "2022-11-17 20:04:21.489774",
+      "updated_at": "2022-11-17 20:04:21.489774",
+      "userId": 1
+    },
+    {
+      "id": "af4c8bb0-6dde-11ed-b5b5-19ab06e25a9b",
+      "content": "Teste 2",
+      "created_at": "2022-11-20 20:04:21.489774",
+      "updated_at": "2022-11-20 20:04:21.489774",
+      "userId": 1
+    },
+    {
+      "id": "b3c123e0-6dde-11ed-b5b5-19ab06e25a9b",
+      "content": "Teste 3",
+      "created_at": "2022-11-24 20:04:21.489774",
+      "updated_at": "2022-11-24 20:04:21.489774",
+      "userId": 1
     }
   ]
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_webapi_first_course/helpers/weekday.dart';
 import 'package:flutter_webapi_first_course/models/journal.dart';
+import 'package:flutter_webapi_first_course/screens/common/confirmation_dialog.dart';
 import 'package:flutter_webapi_first_course/services/journal_service.dart';
 import 'package:uuid/uuid.dart';
 
@@ -8,12 +9,16 @@ class JournalCard extends StatelessWidget {
   final Journal? journal;
   final DateTime showedDate;
   final Function refreshFunction;
+  final int userId;
+  final String token;
 
   const JournalCard(
       {Key? key,
       this.journal,
       required this.showedDate,
-      required this.refreshFunction})
+      required this.refreshFunction,
+      required this.userId,
+      required this.token})
       : super(key: key);
 
   @override
@@ -115,6 +120,7 @@ class JournalCard extends StatelessWidget {
       content: "",
       createdAt: showedDate,
       updatedAt: showedDate,
+      userId: userId
     );
 
     Map<String, dynamic> map = {};
@@ -153,16 +159,30 @@ class JournalCard extends StatelessWidget {
   void removeJournal(BuildContext context) {
     JournalService service = JournalService();
     if (journal != null) {
-      service.delete(journal!.id).then((value) {
-        if (value) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text("Removido com sucesso!"),
-            ),
-          );
-          refreshFunction();
-        }
-      });
+      showConfirmationDialog(context,
+              content:
+                  "Deseja realmente remover o diário do dia ${WeekDay(journal!.createdAt)}?",
+              affirmativeOption: "Remover")
+          .then(
+        (value) {
+          if (value != null) {
+            if (value == true) {
+              service.delete(journal!.id, token).then(
+                (value) {
+                  if (value) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text("Removido com sucesso!"),
+                      ),
+                    );
+                    refreshFunction();
+                  }
+                },
+              );
+            }
+          }
+        },
+      );
     }
   }
 }
