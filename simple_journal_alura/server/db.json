@@ -1,34 +1,9 @@
 {
   "users": [
     {
-      "email": "danielperes.junior@gmail.com",
-      "password": "$2a$10$mnrak8bW8olteNFFAqYOieNoIMbOlMGKnLR90Y8rjB402yeg.ocv2",
+      "email": "daniel@gmail.com",
+      "password": "$2a$10$KgrjnEQD51v.zpJrvTSI6uaJNItzA62aWaSFkplAfHd./ZuDZukeW",
       "id": 1
-    },
-    {
-      "email": "danielperes@gmail.com",
-      "password": "$2a$10$PJY2hVhX0BJGqNhZlXMI..hTuKzY24tMRnZO7SSW50WmEiRzVufTy",
-      "id": 2
-    },
-    {
-      "email": "danielperes.junior@outlook.com",
-      "password": "$2a$10$qdFTXpr4usyOoAfLDNNIXO1MPuCmYhuWBcGl6FZ2q6Kf4la.pHt8C",
-      "id": 3
-    },
-    {
-      "email": "daniel@outlook.com",
-      "password": "$2a$10$qrhYv13sLMhSe96raC.ZZOY2hCYCGXbY9Yh3ixdQeazYUhupeqNva",
-      "id": 4
-    },
-    {
-      "email": "daniel@yahoo.com",
-      "password": "$2a$10$k.KUR7v6FX6YIb25G35Lhux.44.3pvesZBQ5DJ3k.1xJUCSI4y96C",
-      "id": 5
-    },
-    {
-      "email": "daniel2@gmail.com",
-      "password": "$2a$10$yH6PXguSYovbuxmebeDYqO4ePrIiMs7kEuMJsA1h1TZcfXDDTdtq2",
-      "id": 6
     }
   ],
   "learnhttp": {
@@ -51,9 +26,9 @@
     },
     {
       "id": "af4c8bb0-6dde-11ed-b5b5-19ab06e25a9b",
-      "content": "Teste 2",
+      "content": "Teste 2 - atualizado!",
       "created_at": "2022-11-20 20:04:21.489774",
-      "updated_at": "2022-11-20 20:04:21.489774",
+      "updated_at": "2022-11-27 00:47:45.946758",
       "userId": 1
     },
     {
