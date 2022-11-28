@@ -39,7 +39,7 @@ class _TaskState extends State<Task> {
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5),
-              color: Colors.blue,
+              color: Theme.of(context).primaryColor,
             ),
             height: 140,
           ),
@@ -47,8 +47,9 @@ class _TaskState extends State<Task> {
             children: [
               Container(
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: Colors.white),
+                  borderRadius: BorderRadius.circular(5),
+                  color: Theme.of(context).colorScheme.surface,
+                ),
                 height: 100,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -83,9 +84,7 @@ class _TaskState extends State<Task> {
                             width: 200,
                             child: Text(
                               widget.taskName,
-                              style: const TextStyle(
-                                  fontSize: 22,
-                                  overflow: TextOverflow.ellipsis),
+                              style: Theme.of(context).textTheme.displaySmall,
                             ),
                           ),
                         ),
@@ -98,7 +97,7 @@ class _TaskState extends State<Task> {
                       height: 52,
                       width: 52,
                       child: ElevatedButton(
-                        onLongPress: (){
+                        onLongPress: () {
                           TaskDao().deleteTask(widget.taskName);
                         },
                         onPressed: () {
@@ -109,11 +108,11 @@ class _TaskState extends State<Task> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.end,
-                          children: const [
+                          children: <Widget>[
                             Icon(Icons.arrow_drop_up),
                             Text(
                               "UP",
-                              style: TextStyle(fontSize: 12),
+                              style: Theme.of(context).primaryTextTheme.labelMedium,
                             ),
                           ],
                         ),
@@ -130,7 +129,7 @@ class _TaskState extends State<Task> {
                     child: SizedBox(
                       width: 200,
                       child: LinearProgressIndicator(
-                        color: Colors.white,
+                        color: Theme.of(context).colorScheme.onPrimaryContainer,
                         value: (widget.taskDifficulty > 0)
                             ? (widget.level / widget.taskDifficulty) / 10
                             : 1,
@@ -141,7 +140,7 @@ class _TaskState extends State<Task> {
                     padding: const EdgeInsets.all(10.0),
                     child: Text(
                       "Nível: ${widget.level}",
-                      style: const TextStyle(color: Colors.white, fontSize: 16),
+                      style: Theme.of(context).primaryTextTheme.labelLarge,
                     ),
                   ),
                 ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lista_tarefas_alura/data/task_inherited.dart';
 import 'package:lista_tarefas_alura/screens/initial_screen.dart';
+import 'package:lista_tarefas_alura/themes/my_theme.dart';
 
 
 void main() {
@@ -14,9 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: myTheme,
       home: TaskInherited(child: const InitialScreen()),
     );
   }
